@@ -16,7 +16,7 @@ navLinks.forEach((link) => {
 
 const typingText = document.getElementById("typingText");
 const typingPhrases = [
-  "Desenvolvedor em formação | Python, Web e Automações",
+  "Desenvolvedor em formação | Java, Spring Boot e Web",
   "Criando sistemas modernos e funcionais",
   "Transformando ideias em projetos reais"
 ];
