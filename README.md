@@ -1,38 +1,39 @@
-Portfólio — Daniel Santos
+# Portfólio — Daniel Santos
 
-Este projeto foi desenvolvido com o objetivo de apresentar meus projetos, habilidades e evolução na área de desenvolvimento de software.
+Site pessoal com meus projetos, habilidades e contato.
 
-Sobre o projeto
+**Acesse:** https://danieldsantoss.github.io/PORTIFOLIO-2026/
 
-O portfólio reúne alguns dos projetos que venho desenvolvendo durante meus estudos em programação, utilizando principalmente HTML, CSS, JavaScript e Python.
+## Sobre mim
 
-O foco do site é ter uma interface simples, moderna e responsiva, permitindo apresentar meus trabalhos de forma organizada.
+Sou desenvolvedor em formação com foco em **Java** e **Spring Boot** (back-end). Comecei com Python e Flask, que ainda uso em automações e em projetos web.
 
-Tecnologias utilizadas
-HTML5
-CSS3
-JavaScript
-Python
-Flask
-SQLite
-Funcionalidades
-Página inicial interativa
-Seção de projetos
-Links para GitHub e LinkedIn
-Layout responsivo
-Efeitos visuais e animações
-Projetos incluídos
-Sistema de gestão para estética automotiva
-Organizador de tarefas
-Quiz interativo de futebol
-Projetos web utilizando JavaScript
-Objetivo
+## Tecnologias
 
-Estou utilizando este projeto para praticar desenvolvimento front-end, organização de projetos e construção de portfólio profissional.
+**Foco atual**
+- Java e orientação a objetos
+- Spring Boot (APIs REST)
+- JPA / Hibernate e SQL
+- Maven / Gradle e JUnit
 
-Autor
+**Também uso**
+- HTML5, CSS3 e JavaScript
+- Python e Flask
+- Git e GitHub
 
-Daniel Soares dos Santos
+## Projetos no portfólio
 
-GitHub: https://github.com/danieldsantoss
-LinkedIn: https://www.linkedin.com/in/daniel-santos-19425a212
+| Projeto | Tecnologias | Código | Demonstração |
+| --- | --- | --- | --- |
+| Sistema de gestão para estética automotiva | Python, Flask, SQLite | [Saas-Estetica-Auto](https://github.com/danieldsantoss/Saas-Estetica-Auto) | [Render](https://sistema-genenciamento.onrender.com) |
+| Gestão de Polimento | HTML, CSS, JavaScript | [Gest-o-Polimento](https://github.com/danieldsantoss/Gest-o-Polimento) | [GitHub Pages](https://danieldsantoss.github.io/Gest-o-Polimento/) |
+| Organizador de Tarefas | HTML, CSS, JavaScript | [Organizador-de-tarefas1](https://github.com/danieldsantoss/Organizador-de-tarefas1) | [GitHub Pages](https://danieldsantoss.github.io/Organizador-de-tarefas1/) |
+
+## Como rodar
+
+O site é estático (HTML, CSS e JavaScript). Basta abrir o `index.html` no navegador.
+
+## Contato
+
+- GitHub: https://github.com/danieldsantoss
+- LinkedIn: https://www.linkedin.com/in/daniel-santos-19425a212
