@@ -436,6 +436,11 @@ body.light .header {
   font-weight: 800;
 }
 
+.project-soon {
+  color: var(--muted);
+  font-weight: 600;
+}
+
 /* Diferenciais */
 .differentials-grid {
   display: grid;
