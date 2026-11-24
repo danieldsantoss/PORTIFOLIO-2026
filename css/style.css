@@ -204,6 +204,14 @@ h3 { font-size: 1.05rem; font-weight: 600; letter-spacing: -0.01em; }
 }
 @media (max-width: 760px) {
   .section { padding: 84px 0; }
+  h2 { font-size: 1.9rem; }
+  .section-head { margin-bottom: 36px; }
+  .about-text p, .section-text, .hero-description { font-size: 1rem; }
+  .two-cols { gap: 24px; }
+  .service { padding: 24px; }
+  .project-grid { margin-top: 44px; }
+  .shot-small { margin-top: 40px; }
+  .stack { margin-top: 40px; }
   .menu-toggle { display: flex; }
   .nav-menu {
     position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; align-items: flex-start;
