@@ -3,297 +3,286 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio profissional de Daniel Soares dos Santos, desenvolvedor focado em Python, Web e Automações." />
-  <title>Daniel Soares dos Santos | Desenvolvedor</title>
-
+  <meta name="description" content="Portfólio de Daniel Soares dos Santos, desenvolvedor Java júnior. Criador do Autivon, sistema SaaS de gestão feito com Java, Spring Boot, PostgreSQL e React." />
+  <title>Daniel Soares dos Santos | Desenvolvedor Java</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-  <div class="background-glow background-glow-one"></div>
-  <div class="background-glow background-glow-two"></div>
-
-
   <header class="header" id="header">
     <nav class="navbar container">
-      <a href="#home" class="logo">Daniel<span>.</span></a>
-
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
-        <span></span>
-        <span></span>
-        <span></span>
+      <a href="#inicio" class="logo"><span>&lt;</span>DanielSantos<span> /&gt;</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span>
       </button>
-
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nav-link">Início</a></li>
         <li><a href="#sobre" class="nav-link">Sobre</a></li>
+        <li><a href="#projeto" class="nav-link">Projeto</a></li>
+        <li><a href="#servicos" class="nav-link">Serviços</a></li>
         <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-        <li><a href="#projetos" class="nav-link">Projetos</a></li>
-        <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
-        <li><a href="#contato" class="nav-link">Contato</a></li>
-        <li>
-          <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-            ☀️
-          </button>
-        </li>
+        <li><a href="#experiencia" class="nav-link">Experiência</a></li>
+        <li><a href="#contato" class="nav-link nav-cta">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
   <main>
-    <section class="hero section" id="home">
-      <div class="container hero-content reveal">
-        <p class="eyebrow">Portfólio profissional</p>
-
-        <h1>
-          Olá, eu sou<br />
-          <span>Daniel Soares dos Santos</span>
-        </h1>
-
-        <h2>
-          <span id="typingText"></span>
-        </h2>
-
-        <p class="hero-description">
-          Tenho 22 anos e estou construindo soluções com tecnologia, automação e sistemas web.
-          Meu foco é criar projetos organizados, funcionais e úteis para empresas e usuários reais.
-        </p>
-
-        <div class="hero-actions">
-          <a href="#projetos" class="btn btn-primary">Ver projetos</a>
-          <a href="#contato" class="btn btn-outline">Entrar em contato</a>
-          <a href="https://github.com/danieldsantoss" target="_blank" class="btn btn-dark">GitHub</a>
-          <a href="https://www.linkedin.com/in/daniel-santos-19425a212" target="_blank" class="btn btn-dark">LinkedIn</a>
+    <!-- Início -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="eyebrow">Desenvolvedor Java Júnior · Full Stack</p>
+          <h1>Daniel Soares<br /><span>dos Santos</span></h1>
+          <p class="hero-description">
+            Crio sistemas web completos, do banco de dados à tela. Desenvolvi e mantenho em produção o
+            <strong>Autivon</strong>, um sistema de gestão para oficinas e estética automotiva feito com
+            Java, Spring Boot, PostgreSQL e React. Também crio sites para pequenos negócios e profissionais.
+          </p>
+          <div class="hero-actions">
+            <a href="#projeto" class="btn btn-primary">Ver o projeto</a>
+            <a href="#contato" class="btn btn-outline">Entrar em contato</a>
+          </div>
+          <ul class="hero-links">
+            <li><a href="https://github.com/danieldsantoss" target="_blank" rel="noopener">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/daniel-santos-19425a212" target="_blank" rel="noopener">LinkedIn</a></li>
+            <li><a href="https://autivon.com.br" target="_blank" rel="noopener">autivon.com.br</a></li>
+          </ul>
         </div>
+        <div class="code-card reveal" aria-hidden="true">
+          <div class="code-bar"><i></i><i></i><i></i><span>OrcamentoController.java</span></div>
+<pre><code><span class="c-an">@RestController</span>
+<span class="c-an">@RequestMapping</span>(<span class="c-st">"/orcamentos"</span>)
+<span class="c-kw">public class</span> <span class="c-ty">OrcamentoController</span> {
 
-        <div class="hero-stats">
-          <div>
-            <strong>Python</strong>
-            <span>Automações</span>
-          </div>
-          <div>
-            <strong>Web</strong>
-            <span>HTML, CSS e JS</span>
-          </div>
-        
+  <span class="c-kw">private final</span> <span class="c-ty">OrcamentoService</span> service;
+
+  <span class="c-an">@PostMapping</span>
+  <span class="c-kw">public</span> <span class="c-ty">OrcamentoDTO</span> <span class="c-fn">criar</span>(
+      <span class="c-an">@Valid @RequestBody</span> <span class="c-ty">NovoOrcamento</span> dados) {
+    <span class="c-kw">return</span> service.<span class="c-fn">criar</span>(dados);
+  }
+}<span class="cursor"></span></code></pre>
         </div>
       </div>
     </section>
 
-
+    <!-- Sobre -->
     <section class="section" id="sobre">
-      <div class="container grid-two">
-        <div class="section-heading reveal">
+      <div class="container two-cols">
+        <div class="reveal">
           <p class="eyebrow">Sobre mim</p>
-          <h2>Desenvolvedor em evolução, focado em criar soluções reais.</h2>
+          <h2>Do chamado de suporte ao código que resolve o problema.</h2>
         </div>
-
-        <div class="about-card reveal">
+        <div class="about-text reveal">
           <p>
-            Sou Daniel Soares dos Santos, desenvolvedor em formação com foco em
-            <strong>Python</strong>, <strong>desenvolvimento web</strong>,
-            <strong>Flask</strong> e <strong>automações</strong>.
+            Sou formado em Análise e Desenvolvimento de Sistemas pela Universidade Positivo e moro em Curitiba.
+            Meu foco é desenvolvimento back-end com <strong>Java e Spring Boot</strong>, mas também construo o
+            front-end com <strong>React e TypeScript</strong>.
           </p>
-
           <p>
-            Tenho interesse em criar sistemas úteis para empresas, automatizar tarefas repetitivas
-            e transformar ideias em projetos práticos. Tenho experiência com suporte técnico,
-            atendimento a clientes, resolução de problemas e aprendizado constante de novas tecnologias.
+            Trabalho com suporte técnico a um sistema de gestão empresarial na WVetro. No dia a dia, entendo o
+            problema do cliente, levanto os requisitos e encaminho para a equipe de desenvolvimento pelo Jira.
+            Essa vivência me ensinou a pensar no usuário antes de escrever a primeira linha de código.
           </p>
-
           <p>
-            Busco uma oportunidade como desenvolvedor júnior para aplicar meus conhecimentos,
-            evoluir profissionalmente e contribuir com soluções bem organizadas e funcionais.
+            Busco uma oportunidade como <strong>desenvolvedor júnior</strong> para crescer em um time e
+            contribuir com sistemas bem feitos, seguros e fáceis de usar.
           </p>
         </div>
       </div>
     </section>
 
+    <!-- Projeto -->
+    <section class="section" id="projeto">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Projeto em destaque</p>
+          <h2>Autivon</h2>
+          <p class="section-text">
+            Sistema SaaS de gestão para oficinas, estética automotiva e funilaria. Projeto próprio, criado do zero
+            e em produção, para cuidar de orçamentos, ordens de serviço, agenda e financeiro.
+          </p>
+        </div>
 
+        <figure class="shot reveal">
+          <div class="shot-bar"><i></i><i></i><i></i><span>autivon.com.br</span></div>
+          <img src="img/autivon-inicio.png" alt="Tela inicial do Autivon com atalhos, números do mês e o que precisa de atenção hoje" loading="lazy" />
+        </figure>
+
+        <div class="project-grid">
+          <div class="project-block reveal">
+            <h3>O que o sistema faz</h3>
+            <ul class="list">
+              <li>Cadastro de clientes e veículos, com busca por nome ou placa</li>
+              <li>Orçamentos enviados por link no WhatsApp, com aprovação do cliente</li>
+              <li>Ordens de serviço, agenda e acompanhamento do carro na oficina</li>
+              <li>Estoque, lista de compras e comparação de preços</li>
+              <li>Financeiro: contas a pagar e receber, Pix com QR Code e comissões da equipe</li>
+              <li>PDFs de orçamento, OS e recibo, leitura de boletos e orçamento por voz</li>
+            </ul>
+          </div>
+          <div class="project-block reveal">
+            <h3>Como foi construído</h3>
+            <ul class="list">
+              <li>API REST em Java 21 e Spring Boot, com arquitetura em camadas</li>
+              <li>Banco PostgreSQL com migrations versionadas no Flyway</li>
+              <li>Várias empresas no mesmo sistema, com os dados de cada uma separados no banco</li>
+              <li>Login seguro, autenticação em dois fatores e adequação à LGPD</li>
+              <li>Front-end em React e TypeScript, pensado primeiro para o celular</li>
+              <li>Servidor Linux com Docker, HTTPS, ambientes de teste e produção e backup diário</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="shot shot-small reveal">
+          <div class="shot-bar"><i></i><i></i><i></i><span>Orçamento enviado ao cliente</span></div>
+          <img src="img/autivon-orcamento.png" alt="Orçamento do Autivon aberto pelo cliente, com botões de pagar com Pix, baixar PDF e chamar no WhatsApp" loading="lazy" />
+        </figure>
+
+        <div class="stack reveal">
+          <span>Java 21</span><span>Spring Boot</span><span>Spring Security</span><span>Spring Data JPA</span>
+          <span>PostgreSQL</span><span>Flyway</span><span>React</span><span>TypeScript</span>
+          <span>Docker</span><span>Linux</span><span>JUnit</span>
+        </div>
+
+        <div class="project-actions reveal">
+          <a href="https://autivon.com.br" target="_blank" rel="noopener" class="btn btn-primary">Visitar o Autivon</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="section" id="servicos">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Serviços</p>
+          <h2>Seu negócio merece um site.</h2>
+          <p class="section-text">
+            Crio sites profissionais para empresas, profissionais autônomos e empreendedores que querem
+            apresentar melhor o seu trabalho na internet. Me conte a sua necessidade e eu crio do seu jeito.
+          </p>
+        </div>
+
+        <div class="services reveal">
+          <article class="service">
+            <span class="service-n">01</span>
+            <h3>Portfólios</h3>
+            <p>Mostre seus trabalhos, experiências e serviços em um só lugar. Ideal para psicólogos, personal trainers e profissionais autônomos.</p>
+            <p class="service-tipos">Portfólio profissional · Cartão de visita digital · Links para a bio</p>
+          </article>
+          <article class="service">
+            <span class="service-n">02</span>
+            <h3>Lojas e catálogos online</h3>
+            <p>Apresente seus produtos com fotos, preços e tamanhos, e receba os pedidos pelo WhatsApp.</p>
+            <p class="service-tipos">Lojas de roupas · Catálogo de produtos · Cardápio digital</p>
+          </article>
+          <article class="service">
+            <span class="service-n">03</span>
+            <h3>Sites para empresas</h3>
+            <p>Apresente sua empresa e seus serviços e facilite o contato com novos clientes.</p>
+            <p class="service-tipos">Site de apresentação · Agendamento online · Página de imóveis</p>
+          </article>
+          <article class="service">
+            <span class="service-n">04</span>
+            <h3>Páginas de divulgação</h3>
+            <p>Divulgue um lançamento e receba os interessados direto no WhatsApp.</p>
+            <p class="service-tipos">Cursos · Eventos · Promoções</p>
+          </article>
+        </div>
+
+        <div class="incluso reveal">
+          <h3>Você recebe tudo pronto</h3>
+          <ul>
+            <li>Domínio com o nome do seu negócio</li>
+            <li>Hospedagem configurada</li>
+            <li>Site no ar, pronto para usar</li>
+            <li>Feito para o celular</li>
+            <li>Contato direto pelo WhatsApp</li>
+            <li>Pronto para aparecer no Google</li>
+          </ul>
+        </div>
+
+        <div class="project-actions reveal">
+          <a href="https://wa.me/5541996328700?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20de%20site" target="_blank" rel="noopener" class="btn btn-primary">Pedir orçamento no WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
     <section class="section" id="habilidades">
       <div class="container">
-        <div class="section-heading center reveal">
+        <div class="section-head reveal">
           <p class="eyebrow">Habilidades</p>
-          <h2>Tecnologias que venho utilizando nos meus projetos</h2>
+          <h2>Tecnologias que uso no dia a dia</h2>
         </div>
-
-        <div class="skills-grid">
-          <article class="skill-card reveal">HTML5</article>
-          <article class="skill-card reveal">CSS3</article>
-          <article class="skill-card reveal">JavaScript</article>
-          <article class="skill-card reveal">Python</article>
-          <article class="skill-card reveal">Flask</article>
-          <article class="skill-card reveal">SQLite / MySQL</article>
-          <article class="skill-card reveal">Git e GitHub</article>
-          <article class="skill-card reveal">Automação com Python</article>
-          <article class="skill-card reveal">Lógica de programação</article>
-          <article class="skill-card reveal">Responsividade</article>
+        <div class="skills reveal">
+          <div class="skill-row"><h3>Back-end</h3><p>Java, Spring Boot, Spring Security, Spring Data JPA, APIs REST, JUnit</p></div>
+          <div class="skill-row"><h3>Front-end</h3><p>React, TypeScript, JavaScript, HTML5, CSS3</p></div>
+          <div class="skill-row"><h3>Banco de dados</h3><p>PostgreSQL, MySQL, SQL, Flyway</p></div>
+          <div class="skill-row"><h3>Infraestrutura</h3><p>Docker, Linux, servidor VPS, HTTPS, backup em nuvem</p></div>
+          <div class="skill-row"><h3>Ferramentas</h3><p>Git, GitHub, Jira, AnyDesk</p></div>
+          <div class="skill-row"><h3>Também conheço</h3><p>Python, C++</p></div>
         </div>
       </div>
     </section>
 
-  
-    <section class="section" id="projetos">
+    <!-- Experiência -->
+    <section class="section" id="experiencia">
+      <div class="container two-cols">
+        <div class="reveal">
+          <p class="eyebrow">Experiência e formação</p>
+          <h2>Onde estou e de onde venho.</h2>
+        </div>
+        <div class="timeline reveal">
+          <article class="tl-item">
+            <span class="tl-date">Abr 2026 — atual</span>
+            <h3>Suporte Técnico · WVetro</h3>
+            <p>Suporte a usuários de um sistema de gestão empresarial (ERP) por telefone, chat e acesso remoto. Análise de chamados, definição de prioridades e abertura de demandas no Jira para a equipe de programação, com os requisitos para a correção.</p>
+          </article>
+          <article class="tl-item">
+            <span class="tl-date">2026 — atual</span>
+            <h3>Desenvolvedor · Autivon (projeto próprio)</h3>
+            <p>Criação e manutenção de um sistema SaaS em produção, do banco de dados ao servidor.</p>
+          </article>
+          <article class="tl-item">
+            <span class="tl-date">Concluído em 2025</span>
+            <h3>Análise e Desenvolvimento de Sistemas</h3>
+            <p>Universidade Positivo</p>
+          </article>
+          <article class="tl-item">
+            <span class="tl-date">Cursos</span>
+            <h3>Python · Hashtag Treinamentos (cursando)</h3>
+            <p>Inglês · Influx (concluído em 2020)</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="section contact" id="contato">
       <div class="container">
-        <div class="section-heading center reveal">
-          <p class="eyebrow">Projetos</p>
-          <h2>Projetos desenvolvidos e publicados</h2>
-          <p class="section-text">
-            Alguns projetos criados para praticar desenvolvimento web, organização, automação e criação de sistemas.
-          </p>
-        </div>
-
-        <div class="project-filters reveal">
-          <button class="filter-btn active" data-filter="all">Todos</button>
-          <button class="filter-btn" data-filter="web">Web</button>
-          <button class="filter-btn" data-filter="python">Python/Flask</button>
-          <button class="filter-btn" data-filter="produtividade">Produtividade</button>
-        </div>
-
-        <div class="projects-grid">
-          <article class="project-card reveal" data-category="python web">
-            <div class="project-preview">
-              <span>Sistema</span>
-            </div>
-            <div class="project-content">
-              <h3>Sistema de Gerenciamento</h3>
-              <p>
-                Sistema web publicado no Render, com foco em gerenciamento e organização de informações.
-              </p>
-              <div class="tags">
-                <span>Python</span>
-                <span>Web</span>
-              </div>
-              <div class="project-links">
-                <a href="#" target="_blank">Ver no GitHub</a>
-                <a href="https://sistema-genenciamento.onrender.com" target="_blank">Ver demonstração</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-category="web">
-            <div class="project-preview">
-              <span>AutoDetail</span>
-            </div>
-            <div class="project-content">
-              <h3>Gestão de Polimento</h3>
-              <p>
-                Sistema para estética automotiva, pensado para organizar serviços, valores e informações do negócio.
-              </p>
-              <div class="tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="#" target="_blank">Ver no GitHub</a>
-                <a href="https://danieldsantoss.github.io/Gest-o-Polimento/" target="_blank">Ver demonstração</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card reveal" data-category="web produtividade">
-            <div class="project-preview">
-              <span>Tasks</span>
-            </div>
-            <div class="project-content">
-              <h3>Organizador de Tarefas</h3>
-              <p>
-                Aplicação de produtividade para organização de tarefas, com foco em interface simples, moderna e funcional.
-              </p>
-              <div class="tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-              </div>
-              <div class="project-links">
-                <a href="#" target="_blank">Ver no GitHub</a>
-                <a href="https://danieldsantoss.github.io/Organizador-de-tarefas1/" target="_blank">Ver demonstração</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="section" id="diferenciais">
-      <div class="container">
-        <div class="section-heading center reveal">
-          <p class="eyebrow">Diferenciais</p>
-          <h2>O que posso agregar em uma equipe</h2>
-        </div>
-
-        <div class="differentials-grid">
-          <article class="differential-card reveal">
-            <h3>Aprendizado rápido</h3>
-            <p>Tenho facilidade para estudar novas tecnologias e aplicar o conhecimento em projetos práticos.</p>
-          </article>
-
-          <article class="differential-card reveal">
-            <h3>Resolução de problemas</h3>
-            <p>Minha experiência com suporte técnico fortaleceu minha visão analítica e atendimento a necessidades reais.</p>
-          </article>
-
-          <article class="differential-card reveal">
-            <h3>Visão prática</h3>
-            <p>Gosto de transformar ideias em sistemas funcionais, com foco em organização, clareza e utilidade.</p>
-          </article>
-
-          <article class="differential-card reveal">
-            <h3>Interesse em automação</h3>
-            <p>Tenho foco em Python e automações para reduzir tarefas manuais e melhorar processos.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contato">
-      <div class="container contact-wrapper reveal">
-        <div>
+        <div class="section-head reveal">
           <p class="eyebrow">Contato</p>
-          <h2>Vamos conversar sobre oportunidades?</h2>
-          <p class="section-text">
-            Estou aberto a oportunidades como desenvolvedor júnior, suporte técnico voltado à tecnologia
-            e projetos envolvendo sistemas web ou automações.
-          </p>
+          <h2>Vamos conversar?</h2>
+          <p class="section-text">Estou aberto a vagas de desenvolvedor júnior e a novos projetos de sites. Fale comigo pelo canal que preferir.</p>
         </div>
-
-        <div class="contact-cards">
-          <a href="tel:+5541996328700" class="contact-card">
-            <span>Telefone</span>
-            <strong>(41) 99632-8700</strong>
-          </a>
-
-          <a href="mailto:danielsantos.dev01@gmail.com" class="contact-card">
-            <span>E-mail</span>
-            <strong>danielsantos.dev01@gmail.com</strong>
-          </a>
-
-          <a href="https://www.linkedin.com/in/daniel-santos-19425a212" target="_blank" class="contact-card">
-            <span>LinkedIn</span>
-            <strong>daniel-santos-19425a212</strong>
-          </a>
-
-          <a href="https://wa.me/5541996328700" target="_blank" class="contact-card">
-            <span>WhatsApp</span>
-            <strong>Enviar mensagem</strong>
-          </a>
+        <div class="contact-list reveal">
+          <a href="mailto:danielsantos.dev01@gmail.com"><span>E-mail</span><strong>danielsantos.dev01@gmail.com</strong></a>
+          <a href="https://wa.me/5541996328700" target="_blank" rel="noopener"><span>WhatsApp</span><strong>(41) 99632-8700</strong></a>
+          <a href="https://www.linkedin.com/in/daniel-santos-19425a212" target="_blank" rel="noopener"><span>LinkedIn</span><strong>daniel-santos-19425a212</strong></a>
+          <a href="https://github.com/danieldsantoss" target="_blank" rel="noopener"><span>GitHub</span><strong>danieldsantoss</strong></a>
         </div>
       </div>
     </section>
   </main>
 
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">↑</button>
-
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Daniel Soares dos Santos. Portfólio desenvolvido com HTML, CSS e JavaScript.</p>
+    <div class="container footer-row">
+      <p>© <span id="ano">2026</span> Daniel Soares dos Santos</p>
+      <p>Curitiba, PR</p>
     </div>
   </footer>
 
